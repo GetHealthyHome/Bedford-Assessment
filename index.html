@@ -1,138 +1,238 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Multi-Family Health & Safety Questionnaire</title>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
+  <title>Multi-Family Health & Safety Pre-Assessment</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f7fa;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 30px 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      text-align: center;
+      color: #1d3557;
+    }
+
+    label {
+      display: block;
+      margin: 15px 0 5px;
+      font-weight: 600;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      background-color: #1d3557;
+      color: #fff;
+      font-size: 16px;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background-color: #0d2537;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 12px;
+      color: #777;
+    }
+
+    .logo {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .logo img {
+      max-width: 180px;
+    }
+  </style>
 </head>
 <body>
-  <h2>Multi-Family Health & Safety Pre-Assessment</h2>
-  <form id="mfForm">
-    <label>Property Address:</label><br>
-    <input name="PropertyAddress" required><br><br>
+  <div class="container">
+    <div class="logo">
+      <img src="https://gethealthyhome.com/logo.png" alt="Healthy Home Logo">
+    </div>
 
-    <label>Owner/Manager Name:</label><br>
-    <input name="OwnerManagerName" required><br><br>
+    <h1>Multi-Family Health & Safety Pre-Assessment</h1>
 
-    <label>Phone:</label><br>
-    <input name="Phone"><br><br>
+    <form id="mfForm">
+      <label>Owner/Manager Name</label>
+      <input name="OwnerManagerName" required>
 
-    <label>Email:</label><br>
-    <input name="Email" type="email"><br><br>
+      <label>Property Address</label>
+      <input name="PropertyAddress" required>
 
-    <label>Number of Units:</label><br>
-    <input name="NumberOfUnits" type="number"><br><br>
+      <label>Email</label>
+      <input type="email" name="Email" required>
 
-    <label>Year Built:</label><br>
-    <input name="YearBuilt"><br><br>
+      <label>Phone</label>
+      <input name="Phone">
 
-    <label>Occupancy Status:</label><br>
-    <select name="OccupancyStatus">
-      <option>Fully Occupied</option>
-      <option>Partially Occupied</option>
-      <option>Vacant</option>
-    </select><br><br>
+      <label>Number of Units</label>
+      <input name="NumberOfUnits">
 
-    <label>Heating Fuel Type:</label><br>
-    <select name="HeatingFuelType">
-      <option>Natural Gas</option>
-      <option>Propane</option>
-      <option>Oil</option>
-      <option>Electric</option>
-      <option>Other</option>
-    </select><br><br>
+      <label>Year Built</label>
+      <input name="YearBuilt">
 
-    <label>Heating System Age:</label><br>
-    <select name="HeatingAge">
-      <option>Under 5 yrs</option>
-      <option>5–10 yrs</option>
-      <option>10–20 yrs</option>
-      <option>Over 20 yrs</option>
-    </select><br><br>
+      <label>Occupancy Status</label>
+      <select name="OccupancyStatus">
+        <option>Fully Occupied</option>
+        <option>Partially Occupied</option>
+        <option>Vacant</option>
+      </select>
 
-    <label>Heating Maintained by Technician?</label><br>
-    <select name="HeatingMaintained">
-      <option>Yes</option>
-      <option>No</option>
-    </select><br><br>
+      <label>Heating Fuel Type</label>
+      <select name="HeatingFuelType">
+        <option>Natural Gas</option>
+        <option>Propane</option>
+        <option>Oil</option>
+        <option>Electric</option>
+        <option>Other</option>
+      </select>
 
-    <label>Has Central AC?</label><br>
-    <select name="HasCentralAC">
-      <option>Yes</option>
-      <option>No</option>
-    </select><br><br>
+      <label>Heating System Age</label>
+      <select name="HeatingAge">
+        <option>Under 5 yrs</option>
+        <option>5–10 yrs</option>
+        <option>10–20 yrs</option>
+        <option>Over 20 yrs</option>
+      </select>
 
-    <label>AC Approximate Age:</label><br>
-    <input name="ACApproxAge"><br><br>
+      <label>Maintained by Licensed Technician?</label>
+      <select name="HeatingMaintained">
+        <option>Yes</option>
+        <option>No</option>
+      </select>
 
-    <label>Smoke Alarms per Code?</label><br>
-    <select name="SmokeAlarms"><option>Yes</option><option>No</option></select><br><br>
+      <label>Has Central AC?</label>
+      <select name="HasCentralAC">
+        <option>Yes</option>
+        <option>No</option>
+      </select>
 
-    <label>CO Alarms per Code?</label><br>
-    <select name="COAlarms"><option>Yes</option><option>No</option></select><br><br>
+      <label>AC Approximate Age</label>
+      <input name="ACApproxAge">
 
-    <label>At Least One Fire Extinguisher?</label><br>
-    <select name="FireExtinguishers"><option>Yes</option><option>No</option></select><br><br>
+      <label>Smoke Alarms Installed per Code?</label>
+      <select name="SmokeAlarms"><option>Yes</option><option>No</option></select>
 
-    <label>Hazards (check all that apply):</label><br>
-    <input type="checkbox" name="Hazards" value="Asbestos-containing materials"> Asbestos<br>
-    <input type="checkbox" name="Hazards" value="Paint in poor condition"> Paint (pre-1979)<br>
-    <input type="checkbox" name="Hazards" value="Knob & tube wiring"> Knob & Tube<br>
-    <input type="checkbox" name="Hazards" value="Vermiculite insulation"> Vermiculite<br><br>
+      <label>CO Alarms Installed per Code?</label>
+      <select name="COAlarms"><option>Yes</option><option>No</option></select>
 
-    <label>Fan Venting:</label><br>
-    <select name="VentingFans">
-      <option>Yes, all</option>
-      <option>Some</option>
-      <option>None</option>
-      <option>Not sure</option>
-    </select><br><br>
+      <label>At Least One Fire Extinguisher?</label>
+      <select name="FireExtinguishers"><option>Yes</option><option>No</option></select>
 
-    <label>Reported Issues:</label><br>
-    <input type="checkbox" name="ReportedIssues" value="Mold"> Mold<br>
-    <input type="checkbox" name="ReportedIssues" value="Water intrusion"> Water Intrusion<br>
-    <input type="checkbox" name="ReportedIssues" value="Fuel odor"> Fuel Odor / Gas Leaks<br><br>
+      <label>Known or Suspected Hazards (comma separated)</label>
+      <input name="Hazards">
 
-    <label>Handrails on 4+ Riser Stairs?</label><br>
-    <select name="Handrails"><option>Yes</option><option>No</option><option>Not applicable</option></select><br><br>
+      <label>Fan Venting</label>
+      <select name="VentingFans">
+        <option>Yes, all</option>
+        <option>Some</option>
+        <option>None</option>
+        <option>Not sure</option>
+      </select>
 
-    <label>Emergency Lighting and Exit Signage?</label><br>
-    <select name="EmergencyLighting"><option>Yes</option><option>No</option></select><br><br>
+      <label>Reported Issues (comma separated)</label>
+      <input name="ReportedIssues">
 
-    <label>Interested in Funding Programs?</label><br>
-    <select name="FundingInterest"><option>Yes</option><option>No</option></select><br><br>
+      <label>Handrails on Stairs with 4+ Risers</label>
+      <select name="Handrails">
+        <option>Yes</option>
+        <option>No</option>
+        <option>Not applicable</option>
+      </select>
 
-    <label>Recent Renovations or Repairs?</label><br>
-    <select name="RecentRepairs"><option>Yes</option><option>No</option></select><br><br>
+      <label>Emergency Lighting and Exit Signage</label>
+      <select name="EmergencyLighting"><option>Yes</option><option>No</option></select>
 
-    <label>If yes, what areas?</label><br>
-    <input name="RepairsDetails"><br><br>
+      <label>Interested in Funding Programs?</label>
+      <select name="FundingInterest"><option>Yes</option><option>No</option></select>
 
-    <label>Any Unpermitted or Tenant HVAC Appliances?</label><br>
-    <select name="UnpermittedAppliances"><option>Yes</option><option>No</option><option>Not sure</option></select><br><br>
+      <label>Recent Repairs?</label>
+      <select name="RecentRepairs"><option>Yes</option><option>No</option></select>
 
-    <label>Consistent Heat and Hot Water?</label><br>
-    <select name="ConsistentHeatHotWater"><option>Yes</option><option>No</option></select><br><br>
+      <label>Repair Details</label>
+      <input name="RepairsDetails">
 
-    <label>If no, explain:</label><br>
-    <input name="HeatWaterNotes"><br><br>
+      <label>Unpermitted Appliances?</label>
+      <select name="UnpermittedAppliances">
+        <option>Yes</option>
+        <option>No</option>
+        <option>Not sure</option>
+      </select>
 
-    <label>Electrical System Maintained?</label><br>
-    <select name="ElectricalMaintained"><option>Yes</option><option>No</option><option>Not sure</option></select><br><br>
+      <label>Consistent Heat & Hot Water?</label>
+      <select name="ConsistentHeatHotWater"><option>Yes</option><option>No</option></select>
 
-    <label>Air Quality or Radon Testing Docs?</label><br>
-    <select name="AirQualityDocs"><option>Yes</option><option>No</option></select><br><br>
+      <label>If No, Explain</label>
+      <input name="HeatWaterNotes">
 
-    <label>Oil Tank Status:</label><br>
-    <select name="OilTankStatus"><option>Yes</option><option>No</option><option>Not applicable</option></select><br><br>
+      <label>Electrical System Maintained?</label>
+      <select name="ElectricalMaintained">
+        <option>Yes</option>
+        <option>No</option>
+        <option>Not sure</option>
+      </select>
 
-    <label>Drafty/Cold Room Complaints?</label><br>
-    <select name="DraftComplaints"><option>Yes</option><option>No</option><option>Not sure</option></select><br><br>
+      <label>Air Quality or Radon Testing Docs?</label>
+      <select name="AirQualityDocs"><option>Yes</option><option>No</option></select>
 
-    <label>Barriers Between Living/Attic/Basement?</label><br>
-    <select name="AtticBasementBarriers"><option>Yes</option><option>No</option><option>Not sure</option></select><br><br>
+      <label>Oil Tank Status</label>
+      <select name="OilTankStatus">
+        <option>Yes</option>
+        <option>No</option>
+        <option>Not applicable</option>
+      </select>
 
-    <button type="submit">Submit</button>
-  </form>
+      <label>Draft Complaints?</label>
+      <select name="DraftComplaints">
+        <option>Yes</option>
+        <option>No</option>
+        <option>Not sure</option>
+      </select>
+
+      <label>Attic/Basement Barriers Present?</label>
+      <select name="AtticBasementBarriers">
+        <option>Yes</option>
+        <option>No</option>
+        <option>Not sure</option>
+      </select>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <footer>
+    &copy; 2025 Healthy Home Energy & Consulting
+  </footer>
 
   <script>
     const form = document.getElementById('mfForm');
@@ -147,7 +247,6 @@
           fields[key] = value;
         }
       }
-
       fields.SubmissionTime = "";
 
       await fetch(1CN-S78PQU5Yz8W4ynxWv0L768C-PlDNMmoFVjFZNXEs, {
@@ -158,7 +257,7 @@
         }
       });
 
-      alert('Form submitted!');
+      alert('Thank you for your submission!');
       form.reset();
     });
   </script>
